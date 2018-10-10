@@ -1,0 +1,24 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="sectionHeight">50dp</dimen>
+    <dimen name="space_3dp">3dp</dimen>
+
+    <dimen name="schedule_item_size">50dp</dimen>
+
+    <dimen name="schedule_radius_size">4dp</dimen>
+
+    <dimen name="space_10dp">10dp</dimen>
+
+    <dimen name="space_12dp">12dp</dimen>
+
+    <dimen name="font_normal">16sp</dimen>
+
+    <dimen name="margin_8dp">8dp</dimen>
+
+    <dimen name="toollbar_height">48dp</dimen>
+</resources>
