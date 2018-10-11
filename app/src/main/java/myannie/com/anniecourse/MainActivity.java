@@ -1,10 +1,9 @@
 package myannie.com.anniecourse;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
@@ -31,6 +30,13 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
+import myannie.com.anniecourse.Course.ColorUtils;
+import myannie.com.anniecourse.Course.CornerTextView;
+import myannie.com.anniecourse.Course.CourseDao;
+import myannie.com.anniecourse.Course.CourseModel;
+import myannie.com.anniecourse.schedule.Schedule;
+
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -61,19 +67,9 @@ public class MainActivity extends AppCompatActivity
         initSectionView();
         initWeekCourseView();
         setRefreshListener();
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        drawer.addDrawerListener(toggle);
 
         toggle.syncState();
 
@@ -324,6 +320,8 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            Intent intent = new Intent(MainActivity.this, Schedule.class);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
